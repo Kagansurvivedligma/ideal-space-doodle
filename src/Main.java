@@ -13,8 +13,8 @@ public class Main {
     static Teacher mrRa = new Teacher(12, 20, "Mr.Raah", "Engineering", 4, "D2");
     static Teacher mrsAnderson = new Teacher(67, 249, "Mrs.Ambersun", "AP World History", 5, "Q104");
     static Teacher mrsMarek = new Teacher(53, 400, "Mrs.Marick", "Honors Freshman English", 6, "none");
-    static Teacher mrsReyes = new Teacher(2, 50, "Mrs.Raeis", "Honors Precalculus", 7, "R04");
-   
+    static Teacher mrsReyes = new Teacher(2, 50, "Mrs.Arrayes", "Honors Precalculus", 7, "R04");
+    static int x;
     
     public static void main(String[] args) throws Exception { 
         ArrayList<Teacher> Teachers = new ArrayList<Teacher>();
@@ -35,7 +35,7 @@ public class Main {
          String userRespLow  = "";
          while(checkExit(userRespLow) == true){ 
           userRespLow = askQuestions();
-          play(place, Teachers);
+          play(Teachers, userRespLow);
          }
     }
    
@@ -74,12 +74,28 @@ public static void classSchedule(ArrayList<Teacher> og){
         
     
 
-public static void play(int x, ArrayList<Teacher> Teachers){
+public static void play(ArrayList<Teacher> Teachers, String userRespLow){
     if(x == 0){
         System.out.println("Welcome to Amador Valley, here is your class schedule:");
         for(int i = 0; i<Teachers.size(); i++){
             System.out.println(Teachers.get(i).getName());
         }
+
+        System.out.println("Where would you like to go?");
+        System.out.println("[1]" + Teachers.get(0).getName());
+          if(userRespLow.contains("2")){
+            x =2;
+        }System.out.println("[2]" + " Leave School");
+        x=1;
+    }
+    if(x==1){
+     
+    if(x==2){
+        System.out.println("Mr Raman caught you. You have entered a battle with Mr Raman. Answer his questions and survive. Are you ready?");
+        System.out.println("[1] no");
+       System.out.println("[2] yes");
+    }   System.out.println("You have gone to " + Teachers.get(0) + "class");
+        System.out.println(Teachers.get(0).toString());
     }
 }
  
