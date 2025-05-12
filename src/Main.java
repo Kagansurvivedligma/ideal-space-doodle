@@ -301,11 +301,11 @@ public class Main {
 
             if (randBrunchEncounter == 1) {
                 System.out.println(
-                        GREEN + "You see someone nonchalantly talking to all the huzz with his green pants as he owns his haters. What do you do?"
+                        GREEN + "You see someone nonchalantly talking to all the ladies with his green pants as he owns his haters. What do you do?"
                                 + RESET);
                 System.out.println(RED + "[1] Talk to him");
                 System.out.println("[2] Walk away and gobble down 3 more waffles");
-                System.out.println("[3] try to steal one of his huzz " + RESET);
+                System.out.println("[3] try to steal one of his ladyies " + RESET);
             } else if (randBrunchEncounter == 2) {
                 System.out.println(
                         GREEN + "Some nerd comes up to you and asks you what you got on the last AP Chem test. What do you do?"
