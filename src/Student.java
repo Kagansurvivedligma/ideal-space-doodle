@@ -1,29 +1,38 @@
 import java.util.ArrayList;
-public class Student extends People{
+
+public class Student extends People {
     private String grade;
     private double GPA;
     private ArrayList<String> schedule;
 
-    public Student(int height, int IQ, String name, String grade, double GPA, ArrayList<String> schedule){
+    public Student(int height, int IQ, String name, String grade, double GPA) {
         super(height, IQ, name);
         this.grade = grade;
         this.GPA = GPA;
-        this.schedule = schedule;
+
     }
-    public String getGrade(){
+
+    public String getGrade() {
         return grade;
     }
-    public void setGrade(String grade){
+
+    public void setGrade(String grade) {
         this.grade = grade;
     }
-    public double getGPA(){
+
+    public double getGPA() {
         return GPA;
     }
-    public void setGPA(double GPA){
+
+    public String getRoundedGPA() {
+        return "%.2f".formatted(GPA);
+    }
+
+    public void setGPA(double GPA) {
         this.GPA = GPA;
     }
-    public ArrayList<String> getSchedule(){
+
+    public ArrayList<String> getSchedule() {
         return schedule;
     }
-  
 }
