@@ -129,6 +129,8 @@ public class Main {
             if (userRespLow.equals("2")) {
                 x = 2;
             }
+        } else if (x == -99) {
+            x = 1;
         } else if (x == 1) {
             x = 8;
         } else if (x == 2) {
@@ -287,7 +289,7 @@ public class Main {
                         + ". Your current height is: " + player.getHeight() + ". Your next class is: "
                         + Teachers.get(period).getSubject() + "." + " Press anything if you ready to go to class."
                         + RESET);
-                x = 1;
+                x = -99;
                 validResponses = null;
             }
 
@@ -453,10 +455,11 @@ public class Main {
                 if (userRespLow.equals("1")) {
                     System.out.println(
                             YELLOW + "You join the seniors in burning the trash cans and have a great time. You feel super cool."
-                                    + RESET);
-                    validResponses = new ArrayList<>();
-                    validResponses.add("1");
-                    validResponses.add("2");
+                                    );
+                    System.out.println("IQ -30");
+                    System.out.println("Height +10" + RESET);
+                    player.setIQ(player.getIQ() - 30);
+                    player.setHeight(player.getHeight() + 10);
                     
 
                 }
@@ -711,117 +714,117 @@ public class Main {
 
         // ===== CHEMISTRY QUESTIONS (Mrs. Barnett) =====
         Questions Chem1 = new Questions(
-                "The number of protons in the nucleus",
+                "The number of electrons in the nucleus",
                 "The number of electrons in the outer shell",
                 "The sum of protons and neutrons",
-                "The number of electron shells", // Correct answer
+                "The number of protons in the nucleus", // Correct answer
                 "What does the atomic number of an element represent?");
 
         Questions Chem2 = new Questions(
                 "Exothermic reaction",
-                "Endothermic reaction",
+                "Floating reaction",
                 "Combustion reaction",
-                "Synthesis reaction", // Correct answer
+                "Endothermic reaction", // Correct answer
                 "Which type of reaction absorbs heat from its surroundings?");
 
         Questions Chem3 = new Questions(
                 "Protons and electrons",
-                "Protons and neutrons",
+                "Neutrons and Lowtrons",
                 "Electrons and neutrons",
-                "Quarks and leptons", // Correct answer
+                "Protons and neutrons", // Correct answer
                 "What two particles are found in an atom's nucleus?");
 
         Questions Chem4 = new Questions(
                 "1s² 2s² 2p⁶ 3s² 3p⁶",
                 "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹",
-                "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁵", // Correct answer
                 "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶",
+                "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁵",
                 "What is the electron configuration for bromine (Br)?");
 
         // ===== BIO-MED QUESTIONS (Mrs. Turner-Bull) =====
         Questions BioMed1 = new Questions(
                 "Mitochondria",
                 "Ribosomes",
-                "Nucleus", // Correct answer
-                "Endoplasmic reticulum",
+                "Golgi apparatus", 
+                "Nucleus",
                 "Which organelle contains the cell's genetic material?");
 
         Questions BioMed2 = new Questions(
                 "Adenine-Thymine and Guanine-Cytosine",
                 "Adenine-Guanine and Thymine-Cytosine",
-                "Adenine-Uracil and Guanine-Cytosine", // Correct answer
                 "Adenine-Cytosine and Guanine-Uracil",
+                "Adenine-Uracil and Guanine-Cytosine", 
                 "What are the correct base pairings in RNA?");
 
         Questions BioMed3 = new Questions(
                 "Left ventricle → aorta → body → right atrium",
-                "Right ventricle → pulmonary artery → lungs → left atrium", // Correct answer
                 "Left atrium → left ventricle → lungs → right atrium",
                 "Right atrium → right ventricle → body → left atrium",
+                "Right ventricle → pulmonary artery → lungs → left atrium",
                 "Which sequence correctly describes pulmonary circulation?");
 
         Questions BioMed4 = new Questions(
                 "Insulin",
                 "Glucagon",
-                "Hemoglobin", // Correct answer
-                "Adrenaline",
+                "Pork", 
+                "Hemoglobin",
                 "Which protein carries oxygen in red blood cells?");
         // ===== PE QUESTIONS (Mrs. Scavone) =====
         Questions PE1 = new Questions(
                 "Flexibility",
                 "Cardiovascular endurance",
-                "Muscular strength", // Correct answer
-                "Body composition",
+                "Muscular endurance", 
+                "Muscular strength",
                 "Which component of fitness is measured by how much weight you can lift?");
 
         Questions PE2 = new Questions(
                 "ATP-PCr system",
                 "Glycolytic system",
-                "Oxidative system", // Correct answer
-                "Krebs cycle",
+                "Formative system", 
+                "Oxidative system",
                 "Which energy system is primarily used during marathon running?");
 
         Questions PE3 = new Questions(
                 "Increased heart rate",
                 "Deeper breathing",
                 "Muscle fatigue",
-                "Increased flexibility", // Correct answer
+                "Increased flexibility", 
                 "Which is NOT an immediate effect of exercise on the body?");
 
         Questions PE4 = new Questions(
-                "5-10 minutes",
-                "10-15 minutes", // Correct answer
-                "15-20 minutes",
-                "20-30 minutes",
+                "1-2 minutes",
+                "20-70 minutes", 
+                "30-50 minutes",
+                "10-15 minutes",
                 "How long should a proper warm-up typically last?");
 
         // ===== ENGINEERING QUESTIONS (Mr. Ra) =====
         Questions Eng1 = new Questions(
                 "Tensile strength",
                 "Compressive strength",
-                "Shear strength", // Correct answer
-                "Torsional strength",
+                "Friction strength", 
+                "Shear strength",
                 "Which type of strength resists forces that try to slide parts past each other?");
 
         Questions Eng2 = new Questions(
                 "Potential energy",
                 "Kinetic energy",
                 "Thermal energy",
-                "Mechanical energy", // Correct answer
+                "Mechanical energy", 
                 "What type of energy is stored in a compressed spring?");
 
         Questions Eng3 = new Questions(
                 "Newton's First Law",
-                "Newton's Second Law", // Correct answer
+                "Newton's Fifth Law", 
                 "Newton's Third Law",
-                "Law of Universal Gravitation",
+                "Newton's Second Law",
                 "Which law states that force equals mass times acceleration (F=ma)?");
 
         Questions Eng4 = new Questions(
                 "Copper",
                 "Aluminum",
-                "Steel", // Correct answer
-                "Titanium",
+                "Wood", 
+                "Steel",
                 "Which material is most commonly used in structural engineering for buildings?");
 
         mrsAndersonQuestions.add(APWorld1);
